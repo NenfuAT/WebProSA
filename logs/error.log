@@ -1,0 +1,16 @@
+[Fri Nov 22 00:15:19.003465 2024] [alias:warn] [pid 7:tid 7] AH00671: The ScriptAlias directive in /etc/apache2/conf-enabled/serve-cgi-bin.conf at line 11 will probably never match because it overlaps an earlier ScriptAlias.
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+[Fri Nov 22 00:15:19.025795 2024] [mpm_event:notice] [pid 7:tid 7] AH00489: Apache/2.4.62 (Debian) mod_fcgid/2.3.9 configured -- resuming normal operations
+[Fri Nov 22 00:15:19.027246 2024] [core:notice] [pid 7:tid 7] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Fri Nov 22 00:22:48.596461 2024] [cgid:error] [pid 66:tid 66] (13)Permission denied: AH01241: exec of '/usr/src/cgi-bin/hello.rb' failed
+[Fri Nov 22 00:22:48.597787 2024] [cgid:error] [pid 11:tid 23] [client 172.20.0.1:54924] End of script output before headers: hello.rb
+/usr/src/cgi-bin/hello.rb: /usr/src/cgi-bin/hello.rb:8: unterminated string meets end of file (SyntaxError)
+puts "</html>
+             ^
+
+[Fri Nov 22 00:25:39.047597 2024] [cgid:error] [pid 11:tid 26] [client 172.20.0.1:34352] End of script output before headers: hello.rb
+/usr/src/cgi-bin/hello.rb: /usr/src/cgi-bin/hello.rb:8: unterminated string meets end of file (SyntaxError)
+puts "</html>
+             ^
+
+[Fri Nov 22 00:26:15.124508 2024] [cgid:error] [pid 11:tid 28] [client 172.20.0.1:34348] End of script output before headers: hello.rb

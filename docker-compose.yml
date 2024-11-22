@@ -1,0 +1,23 @@
+services:
+  ruby:
+    build: ./build/ruby
+    volumes:
+      - ./ruby:/usr/src/ruby
+    networks:
+      - 3kx-net
+
+  ruby-cgi:
+    build: ./build/ruby-cgi
+    ports:
+      - "8080:80"
+    volumes:
+      - ./ruby:/usr/src/ruby
+      - ./htdocs:/var/www/html
+      - ./cgi-bin:/usr/src/cgi-bin
+      - ./logs:/var/log/apache2
+    networks:
+      - 3kx-net
+
+networks:
+  3kx-net:
+    driver: bridge

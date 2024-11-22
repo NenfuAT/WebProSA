@@ -1,5 +1,8 @@
-
-## 権限エラーの解決
+# WebプロSA代理メモ
+## debianでapt-getできない(俺がなった)
+ - Dockerのゴミが溜まってたせい
+ - Dockerのいらないイメージ消したら動いた
+## 権限エラーの解決(講義で必須)
 ```
 root@d73f894fbf37:/usr/src/cgi-bin# ls -l
 total 4
